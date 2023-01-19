@@ -11,7 +11,7 @@ const corsOptions = {
 const app = express();
 const api = require(path.join(__dirname, "api", "index.js"));
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors(corsOptions));
 app.use(express.json());
